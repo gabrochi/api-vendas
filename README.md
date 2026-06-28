@@ -34,7 +34,7 @@ Os dados são armazenados em memória — ao reiniciar o servidor, as alteraçõ
 
 ## 🔜 Próximos passos
 
-- [ ] Integração com banco de dados (SQLite + SQLAlchemy)
+- [ ] Integração com banco de dados
 - [ ] Validações com `@field_validator` do Pydantic
 - [ ] Autenticação com JWT
 - [ ] Testes automatizados com pytest
