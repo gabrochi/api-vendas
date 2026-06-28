@@ -56,17 +56,17 @@ def exibir_relatorio():
 
     quantidades = []
     total = []
-    maior_item = 0 
-    maior_qtd_item = 0
-    
+    maior_item = {"item": None, "preco": 0}
+    maior_qtd_item = {"item": None, "quantidade": 0}
+ 
     for venda in vendas.values():
         quantidades.append(venda["quantidade"]) #adiciona em quantidades os valores de venda["quantidade"]
         total.append(venda["preco"] * venda["quantidade"])  #adiciona em quantidades os valores de venda["preco"] * venda["quantidade"] 
 
-        if venda["preco"] > maior_item: #verifica o maior preco dos pedidos e retorna o item e o preco
+        if venda["preco"] > maior_item["preco"]: #verifica o maior preco dos pedidos e retorna o item e o preco
             maior_item = {"item": venda["item"], "preco": venda["preco"]}
             
-        if venda["quantidade"] > maior_qtd_item: #verifica a maior quantidade dos itens dos pedidos e retorna o item e a quantidade
+        if venda["quantidade"] > maior_qtd_item["quantidade"]: #verifica a maior quantidade dos itens dos pedidos e retorna o item e a quantidade
             maior_qtd_item = {"item": venda["item"], "quantidade": venda["quantidade"]}
     
 
